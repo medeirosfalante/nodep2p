@@ -34,8 +34,9 @@ namespace nodep2p
 		{
 			switch (type)
 			{
-			case TypeAdvertise return "Advertise";
-				case TypeAdvertiseChallenge:
+			case TypeAdvertise:
+				return "Advertise";
+			case TypeAdvertiseChallenge:
 				return "AdvertiseChallenge";
 			case TypeAdvertiseResponse:
 				return "AdvertiseResponse";
