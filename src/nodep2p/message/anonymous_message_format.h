@@ -1,9 +1,14 @@
-/*
-* anonymous_message_format.h
-*
-*  Created on: 22 de mai de 2020
-*      Author: Rafael Medeiros
-*/
+
+/**
+ * @file anonymous_message_format.h
+ * @author  Rafael Medeiros
+ * @brief 
+ * @version 0.1
+ * @date 2020-05-27
+ * 
+ * @copyright Copyright (c) 2020
+ * 
+ */
 
 #pragma once
 

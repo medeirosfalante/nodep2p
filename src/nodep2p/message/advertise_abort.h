@@ -8,6 +8,7 @@
  * @copyright Copyright (c) 2020
  * 
  */
+#pragma once
 
 #include <nodep2p/message/types.h>
 #include <spotify/json.hpp>
