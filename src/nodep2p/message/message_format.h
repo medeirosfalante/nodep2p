@@ -9,7 +9,9 @@
  * 
  */
 
-#include <nodep2p/message_format/anonymous_message_format.h>
+#pragma once
+
+#include <nodep2p/message/anonymous_message_format.h>
 #include <nodep2p/message/types.h>
 #include <nodep2p/version.h>
 #include <spotify/json.hpp>

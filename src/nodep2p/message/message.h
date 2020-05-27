@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2020
  * 
  */
-
+#pragma once
 
 #ifndef SRC_MESSAGE_MESSAGE_H_
 #define SRC_MESSAGE_MESSAGE_H_
