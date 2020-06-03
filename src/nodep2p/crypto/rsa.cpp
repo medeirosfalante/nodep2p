@@ -135,7 +135,7 @@ namespace nodep2p
             unsigned char buf[RSA_size(_key)];
             int size = RSA_public_encrypt(key_str.length(), (const unsigned char *)key_str.c_str(), buf, _key, RSA_PKCS1_PADDING);
             check_error("RSA_public_encrypt", size);
-            return std::string(buf, buf + size);
+            return base64_encode(buf, size);
         }
 
         std::string RSA::public_decrypt(const std::string &encrypted) const
@@ -169,6 +169,7 @@ namespace nodep2p
             check_error("RSA_private_decrypt", size);
             return std::string(buf, buf + size);
         }
+
         std::string RSA::get_public_key_string() const
         {
             return key_to_string_public(_key);
