@@ -11,6 +11,8 @@
 
 #pragma once
 
+#include <iostream>
+
 #ifndef SRC_VERSION_H_
 #define SRC_VERSION_H_
 

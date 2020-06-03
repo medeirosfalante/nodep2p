@@ -22,6 +22,6 @@ public:
 
 private:
     std::string _what;
-}
+};
 
 #endif /*SRC_CRYPTO_EXCEPTION_H_ */
