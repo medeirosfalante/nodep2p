@@ -13,27 +13,30 @@
 
 #include <nodep2p/crypto/pki.h>
 
-
-
 #ifndef SRC_CRYPTOKEY_CRYPTO_KEY_PAIR_H_
 #define SRC_CRYPTOKEY_CRYPTO_KEY_PAIR_H_
 
-
-namespace nodep2p {
-    namespace cryptokey{
+namespace nodep2p
+{
+    namespace cryptokey
+    {
         class CryptoKeyPair
         {
-        private:
-           CryptoKeyPair();
-           std::shared_ptr<crypto::PKI> _pki;
         public:
-           static CryptoKeyPair gem();
-           static CryptoKeyPair from_pem(const std::string &path); 
+            static CryptoKeyPair generate();
+            static CryptoKeyPair from_pem(const std::string &path);
+
+            std::string public_encrypt(const std::string &message) const;
+            std::string private_decrypt(const std::string &message) const;
+            std::string get_serialised_public_key() const;
+
+        private:
+            CryptoKeyPair(std::shared_ptr<crypto::PKI>);
+
+            std::shared_ptr<crypto::PKI> _pki;
         };
-        
-    }
-}
 
-
+    } // namespace cryptokey
+} // namespace nodep2p
 
 #endif /* SRC_CRYPTOKEY_CRYPTO_KEY_PAIR_H_ */
