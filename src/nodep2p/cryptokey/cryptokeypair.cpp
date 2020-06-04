@@ -18,17 +18,17 @@ namespace nodep2p
     {
         CryptoKeyPair CryptoKeyPair::generate()
         {
-            return CryptoKeyPair(nodep2p::Crypto::RSA::generate());
+            return CryptoKeyPair(nodep2p::crypto::RSA::generate());
         }
         CryptoKeyPair CryptoKeyPair::from_pem(const std::string &path)
         {
-            return CryptoKeyPair(nodep2p::Crypto::RSA::from_pem(path));
+            return CryptoKeyPair(nodep2p::crypto::RSA::from_pem(path));
         }
-        CryptoKeyPair::CryptoKeyPair(std::shared_ptr<nodep2p::Crypto::PKI> pki) : _pki(pki) {}
+        CryptoKeyPair::CryptoKeyPair(std::shared_ptr<nodep2p::crypto::PKI> pki) : _pki(pki) {}
 
-        std::string CryptoKeyPair::public_ecrypt(const std::string &message) const
+        std::string CryptoKeyPair::public_encrypt(const std::string &message) const
         {
-            return _pki->public_ecrypt(message);
+            return _pki->public_encrypt(message);
         }
         std::string CryptoKeyPair::private_decrypt(const std::string &encrypted) const
         {

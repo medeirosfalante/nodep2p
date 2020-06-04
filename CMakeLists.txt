@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.1.0)
 enable_testing()
-project (nodep2p)
+set(PROJECT_NAME_STR nodep2p)
+project(${PROJECT_NAME_STR})
 include(FetchContent)
 FetchContent_Declare(spotify-json
 GIT_REPOSITORY https://github.com/spotify/spotify-json
